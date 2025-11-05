@@ -168,15 +168,15 @@ export default function Header() {
           >
             {/* Logo Image - Optimized with Next.js Image */}
             <Image 
-              src="/logo.png" 
-              alt="logo"
-              //alt="Dr. Sushma Dental Clinic Logo - Best Dental Care" 
-              width={56}
-              height={56}
-              className="object-contain group-hover:scale-105 transition-transform duration-200"
-              priority
-              quality={90}
-            />
+  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.png`} 
+  alt="Dr. Sushma Dental Clinic Logo - Best Dental Care" 
+  width={56}
+  height={56}
+  className="object-contain group-hover:scale-105 transition-transform duration-200"
+  priority
+  quality={90}
+/>
+
             
             {/* Clinic Name with Heading */}
             <div className="flex flex-col">
