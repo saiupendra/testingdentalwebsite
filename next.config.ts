@@ -4,7 +4,7 @@ const isProd = process.env.NODE_ENV === 'production'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: isProd ? '/testingdentalwebsite' : '',
+  
   assetPrefix: isProd ? '/testingdentalwebsite/' : '',
   output: 'export', // Required for static export to GitHub Pages
   images: {
