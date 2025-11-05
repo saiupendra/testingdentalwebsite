@@ -1,8 +1,12 @@
 import type { NextConfig } from 'next'
 
+const isProd = process.env.NODE_ENV === 'production'
+const repoName = 'testingdentalwebsite'
+
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/testingdentalwebsite', // Add '/repo-name' here if using GitHub Pages subdomain
+  basePath: isProd ? `/${repoName}` : '',
+  assetPrefix: isProd ? `/${repoName}/` : '',
   images: {
     unoptimized: true,
   },
