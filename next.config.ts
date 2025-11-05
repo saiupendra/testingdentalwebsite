@@ -1,22 +1,15 @@
-import type { NextConfig } from 'next'
+// next.config.ts
 
 const isProd = process.env.NODE_ENV === 'production'
-const repoName = 'testingdentalwebsite'
 
-const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: isProd ? `/${repoName}` : '',
-  assetPrefix: isProd ? `/${repoName}/` : '',
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  basePath: isProd ? '/testingdentalwebsite' : '',
+  assetPrefix: isProd ? '/testingdentalwebsite/' : '',
+  output: 'export', // Required for static export to GitHub Pages
   images: {
-    unoptimized: true,
-  },
-  trailingSlash: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
+    unoptimized: true, // Disable image optimization for export
   },
 }
 
-export default nextConfig
+export default nextConfig;
