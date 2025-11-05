@@ -169,7 +169,8 @@ export default function Header() {
             {/* Logo Image - Optimized with Next.js Image */}
             <Image 
               src="/logo.png" 
-              alt="Dr. Sushma Dental Clinic Logo - Best Dental Care" 
+              alt="logo"
+              //alt="Dr. Sushma Dental Clinic Logo - Best Dental Care" 
               width={56}
               height={56}
               className="object-contain group-hover:scale-105 transition-transform duration-200"
